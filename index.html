@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Lion, Earls Colne | Pub Classics, Wood-fired Pizza & Sunday Roast</title>
+<meta name="robots" content="noindex, nofollow"><!-- MOCK-UP: remove this line when the site goes live -->
+<meta name="description" content="The Lion, High Street, Earls Colne. Pub classics, wood-fired pizza, small plates, Sunday roasts and live music, under new management.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" href="images/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- Share card. The og:image URL must be absolute: change https://kevsinfield.github.io/lion-earls-colne-redesign/ to the real domain when the site goes live. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Lion, Earls Colne">
+<meta property="og:title" content="The Lion, Earls Colne | Pub Classics, Wood-fired Pizza & Sunday Roast">
+<meta property="og:description" content="The Lion, High Street, Earls Colne. Pub classics, wood-fired pizza, small plates, Sunday roasts and live music, under new management.">
+<meta property="og:image" content="https://kevsinfield.github.io/lion-earls-colne-redesign/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20261029145801">
+</head>
+<body>
+
+<div class="mock">Mock-up. Photos, prices and details to be confirmed.</div>
+
+<header id="chrome-head" data-active="home"></header>
+
+<main id="top">
+
+  <section class="hero today" aria-labelledby="homeT">
+    <div class="hero__bg" role="img" aria-label="The Lion on the High Street, Earls Colne"></div>
+    <div class="hero__wash"></div>
+    <div class="wrap today__in">
+      <div class="today__say">
+        <p class="status say" id="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span class="say__t"><span id="sayLead">Welcome to the Lion.</span> <em id="sayEm"></em></span></p>
+        <h1 id="homeT">Pub classics, wood-fired pizza <span class="nb">&amp; Sunday roasts.</span></h1>
+        <p class="hero__sub" id="saySub">Small plates, ciabattas and a warm welcome. A new chapter for the village inn.</p>
+        <div class="today__act">
+          <a class="btn btn--gold" data-book href="#">Book a table</a>
+          <span class="today__alt"><button class="btn btn--line" data-menu type="button">The menu</button><a class="btn btn--line" href="#find">Find us</a></span>
+        </div>
+      </div>
+      <aside class="sheet" aria-labelledby="sheetT">
+        <h2 id="sheetT">Today at the Lion <span id="sheetDate"></span></h2>
+        <ol class="rail" id="rail"></ol>
+        <p class="rail__note" id="railNote" hidden></p>
+        <a class="sheet__next" id="sheetNext" href="#soon" hidden></a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="soon" id="soon" aria-labelledby="soonT" hidden>
+    <div class="wrap">
+      <h2 id="soonT">What's on next</h2>
+      <p class="soon__sub" id="soonSub"></p>
+      <div class="soon__grid" id="soonGrid"></div>
+      <a class="soon__all" href="whats-on.html">See everything that's on</a>
+    </div>
+  </section>
+
+  <section class="bands" id="eat" aria-label="Food, drink and what's on">
+    <article class="band">
+      <div class="ph ph--img" style="background-image:url(images/pizza.jpg);background-position:center 55%" role="img" aria-label="A wood-fired pizza topped with burrata, Parma ham and rocket"></div>
+      <div class="band__txt">
+        <h2>Pizza from the wood-fired oven.</h2>
+        <p>Small plates to share, and pub classics like beer-battered haddock and chips or The Lion Burger. 2For1 pizzas on Wednesdays, tapas on Fridays.</p>
+        <button class="link link--dark" data-menu type="button">Read the menu</button>
+      </div>
+    </article>
+    <article class="band">
+      <div class="ph ph--img" style="background-image:url(images/roast.jpg);background-position:center 65%" role="img" aria-label="Sunday roast beef with a Yorkshire pudding, gravy and a glass of red wine"></div>
+      <div class="band__txt">
+        <h2>The proper roast.</h2>
+        <p>Sundays, 12 to 5pm. Locally reared beef, gammon, chicken and a proper veggie roast. Book ahead, it fills up.</p>
+        <a class="link link--dark" data-book href="#">Book a table</a>
+      </div>
+    </article>
+    <article class="band" id="whats-on">
+      <div class="ph ph--img" id="weekPhoto" style="background-image:url(images/poker-night.jpg);background-position:center 40%" role="img" aria-label="Poker night at the Lion, players around an orange poker table under the old beams"></div>
+      <div class="band__txt">
+        <h2>Poker, pizza, tapas, roast.</h2>
+        <ol class="week__list" id="weekList"></ol>
+        <a class="link link--dark" href="whats-on.html">See everything that's on</a>
+        <p class="todo">TODO: Craig to confirm the weekly rhythm.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="history history--photo" id="history">
+    <div class="strip">
+      <div class="strip__bg" aria-hidden="true"></div>
+      <div class="wrap strip__in">
+        <p class="kicker">Our history</p>
+        <h2>A High Street landmark.</h2>
+        <p class="strip__tag">Grade II listed, and still on the High Street.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="history__lead">A Grade II listed, timber-framed building on Earls Colne High Street, with parts dating back to the 14th century and a 17th-century rebuild. Part of it is thought to have started life as a market hall.</p>
+      <ul class="trio">
+        <li><span class="num">14th century</span><h3>The first walls</h3><p>The gabled cross-wing at one end, and a range alongside it that may once have been a market hall.</p></li>
+        <li><span class="num">17th century</span><h3>Rebuilt</h3><p>A two-storey rebuild on the site of an older open hall, with beams and posts you can still see inside.</p></li>
+        <li><span class="num">Today</span><h3>A new chapter</h3><p>Still Grade II listed, still on the High Street, and now open under new management.</p></li>
+      </ul>
+      <p class="history__src">Source: <a href="https://britishlistedbuildings.co.uk/101306203-the-lion-public-house-earls-colne" rel="noopener">Historic England listing, The Lion Public House</a></p>
+      <p class="todo">TODO: Craig to check. The old site's "1678" date couldn't be confirmed, so it's left out.</p>
+    </div>
+  </section>
+
+  <section class="join" id="join">
+    <div class="wrap">
+      <div class="ticket">
+        <div class="ticket__stub">
+          <img src="images/lion-emblem.jpg" alt="The Lion crest: a crowned lion in a ruff" width="430" height="520">
+          <b>The Lion &middot; Earls Colne</b>
+          <span>First to know</span>
+        </div>
+        <div class="ticket__main">
+          <p class="kicker kicker--dark">Never miss a good night</p>
+          <h2>Live music, specials<br>and what's on.</h2>
+          <p>Be the first to know about new menus and the next big night. One short message a week, and you can unsubscribe whenever you like.</p>
+          <form class="join__form js-join">
+            <label class="sr-only" for="joinEmail">Email address</label>
+            <input id="joinEmail" type="email" placeholder="Your email address" required>
+            <button class="btn btn--gold" type="submit">Keep me posted</button>
+            <p class="join__ok ok" hidden>Cheers. (Mock-up only, nothing has been saved.)</p>
+          </form>
+        </div>
+      </div>
+      <p class="join__fine">We'll only use your email for the Lion's weekly news. Unsubscribe any time. <a href="privacy.html">Privacy</a></p>
+    </div>
+  </section>
+
+  <section class="find" id="find">
+    <div class="find__map">
+      <a class="find__mapimg" id="mapOpen" href="#" rel="noopener" aria-label="Open the Lion's location in Google Maps">
+        <img src="images/map.jpg" alt="A map of Earls Colne with a pin on the Lion, on the High Street" width="1400" height="1100" loading="lazy">
+      </a>
+      <p class="find__credit">Map &copy; <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap contributors</a></p>
+      <div class="find__card">
+        <p class="kicker kicker--dark">Find us</p>
+        <h2>The Lion</h2>
+        <address id="addr"></address>
+        <p><a class="phone" id="phone" href="#"></a></p>
+        <p class="find__links"><a id="mapLink" href="#" rel="noopener">Get directions</a> <span aria-hidden="true">&middot;</span> <a id="fb" href="#" rel="noopener">Facebook</a></p>
+        <a class="btn btn--gold" data-book href="#">Book a table</a>
+      </div>
+    </div>
+    <div class="find__hours">
+      <h3 class="find__h">Opening hours</h3>
+      <table class="hours" id="hours"></table>
+      <p class="todo">TODO: confirm these are the standing hours.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span>&copy; The Lion, Earls Colne &middot; <a href="#join">Weekly news</a> &middot; <a href="privacy.html">Privacy</a></span>
+    <span>High Street, Earls Colne CO6 2PA</span>
+  </div>
+</footer>
+
+<div class="sticky" role="region" aria-label="Quick actions">
+  <a class="btn btn--gold" data-book href="#">Book a table</a>
+  <a class="btn btn--line" id="stickyCall" href="#find">Call us</a>
+</div>
+
+<div class="panel" id="panel" role="dialog" aria-modal="true" aria-labelledby="panelT" hidden>
+  <div class="panel__box">
+    <button class="panel__x" type="button" aria-label="Close menu">&times;</button>
+    <header class="mast">
+      <p class="mast__the" aria-hidden="true">The</p>
+      <h2 class="mast__lion" id="panelT" aria-label="The Lion, Earls Colne">Lion</h2>
+      <div class="mast__rule" aria-hidden="true"><span>&#9670;</span></div>
+      <p class="mast__box" aria-hidden="true">Earls Colne</p>
+    </header>
+    <div id="menuBody"></div>
+    <p class="panel__note">Please let a member of staff know if you have any dietary requirements.</p>
+    <a class="btn btn--gold" data-book href="#">Book a table</a>
+  </div>
+</div>
+
+<script src="js/data.js?v=20261029145801"></script>
+<script src="js/bar.js?v=20261029145801"></script>
+<script src="js/fx.js?v=20261029145801"></script>
+<script src="js/main.js?v=20261029145801"></script>
+</body>
+</html>

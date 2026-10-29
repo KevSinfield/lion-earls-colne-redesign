@@ -1,0 +1,93 @@
+{
+  "_note": "Picker details for the mock-up. The Sunday menu's dishes are real (data/menu.json). Tapas Friday dish names are real (read from the Lion's menu image) but the prices and descriptions aren't known yet. The pizza, small plates and pub classics dishes are INVENTED (flagged sample:true) because the real ones couldn't be read.",
+  "menus": [
+    {
+      "id": "sunday-menu",
+      "kind": "regular",
+      "blurb": "Locally reared roasts with all the trimmings. Book ahead, it fills up.",
+      "served_text": "Sundays, 12pm to 5pm",
+      "served": [
+        {
+          "days": [
+            0
+          ],
+          "from": 12,
+          "to": 17
+        }
+      ],
+      "pdf": null
+    },
+    {
+      "id": "tapas-friday",
+      "title": "Tapas Friday",
+      "kind": "regular",
+      "blurb": "Small plates to share, every Friday evening.",
+      "served_text": "Fridays, 5:30pm to 8:30pm",
+      "served": [
+        {
+          "days": [
+            5
+          ],
+          "from": 17.5,
+          "to": 20.5
+        }
+      ],
+      "sections": [
+        {
+          "name": "Our Tapas",
+          "items": [
+            {
+              "name": "Albondigas",
+              "price": null,
+              "description": "",
+              "tags": []
+            },
+            {
+              "name": "Chorizo al Vino",
+              "price": null,
+              "description": "",
+              "tags": []
+            },
+            {
+              "name": "Pan con Tomate",
+              "price": null,
+              "description": "",
+              "tags": []
+            },
+            {
+              "name": "Berenjenas y Miel",
+              "price": null,
+              "description": "",
+              "tags": []
+            },
+            {
+              "name": "Gambas al Ajillo",
+              "price": null,
+              "description": "",
+              "tags": []
+            },
+            {
+              "name": "Patatas Bravas",
+              "price": null,
+              "description": "",
+              "tags": []
+            },
+            {
+              "name": "Anchoas sobre Tostada",
+              "price": null,
+              "description": "",
+              "tags": []
+            },
+            {
+              "name": "Calamares a la Andaluza",
+              "price": null,
+              "description": "",
+              "tags": []
+            }
+          ]
+        }
+      ],
+      "footnote": "Dish names from the Lion's Tapas Friday menu. Prices and descriptions to come."
+    }
+  ]
+}
