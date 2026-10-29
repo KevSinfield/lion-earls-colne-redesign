@@ -24,7 +24,6 @@ em { font-style: italic; color: var(--gold-b); }
 .todo { margin-top: 1rem; font-size: .75rem; color: #d98b6a; letter-spacing: .02em; }
 .week .todo { color: #a5502e; }
 
-.mock { background: #000; color: var(--mute); text-align: center; font-size: .75rem; letter-spacing: .04em; padding: .4rem var(--pad); }
 
 /* Buttons */
 .btn { display: inline-block; font: 500 .8rem var(--sans); letter-spacing: .18em; text-transform: uppercase; text-decoration: none; text-align: center; padding: 1rem 1.7rem; border: 1px solid var(--gold); cursor: pointer; transition: background .25s, color .25s; background: transparent; color: var(--bone); }
@@ -33,7 +32,7 @@ em { font-style: italic; color: var(--gold-b); }
 .btn--line:hover { background: var(--gold); color: var(--bitumen); }
 
 /* Header bar: solid, sticky, shrinks on scroll. Same on every page. */
-:root { --mock-h: 27px; --bar-h: 100px; }
+:root { --mock-h: 0px; --bar-h: 100px; }
 .bar { position: sticky; top: 0; z-index: 40; background: var(--bitumen); border-bottom: 1px solid var(--line); transition: box-shadow .3s; }
 .bar.is-small { box-shadow: 0 6px 24px rgba(0,0,0,.45); }
 .bar__in { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.5rem; height: var(--bar-h); transition: height .25s; }
@@ -213,7 +212,6 @@ address { font-style: normal; color: var(--mute); margin: 1rem 0 .4rem; }
   .bar__nav, .bar__right { display: none; }
   .bar__burger { display: block; }
   .status { margin-bottom: 1rem; font-size: .75rem; }
-  .mock { font-size: .75rem; }
   .trio { grid-template-columns: 1fr; gap: 2rem; }
   .trio li, .trio li:first-child { border-left: 0; padding: 0 0 0 0; border-top: 1px solid var(--line); padding-top: 1.4rem; }
   .week__in { grid-template-columns: 1fr; }
