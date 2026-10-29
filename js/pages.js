@@ -158,8 +158,8 @@
       pdf.href = m.pdf; pdf.setAttribute("download", "");
       bar.appendChild(pdf);
     }
-    if (!bar.children.length) bar = null;
-    if (bar) paper.appendChild(bar);
+    bar.appendChild(bookButton("Book a table", "btn btn--gold btn--sm"));
+    paper.appendChild(bar);
 
     (m.offers || []).forEach(function (o) {
       var b = el("div", "offer");

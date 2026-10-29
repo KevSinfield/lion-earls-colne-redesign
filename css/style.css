@@ -497,27 +497,9 @@ p, li { text-wrap: pretty; }
 
 /* ---- Polish pass (29 Oct 2026): designed event cards, a warm grade on photos, lighter hero wash, finishing touches ---- */
 
-/* Event cards drawn from the event data, in the Lion's own style (instead of Facebook posters) */
-.ecard { aspect-ratio: 1 / 1; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: clamp(1.4rem, 4vw, 2.4rem); position: relative; color: #f3ead8; }
-.ecard--plain { background: radial-gradient(90% 80% at 50% 0%, #2f241a, #171310 75%); }
-.ecard--party { background: radial-gradient(90% 120% at 50% 0%, #7a2a1f, #3d130d 70%); }
-.ecard::before { content: ""; position: absolute; inset: 10px; border: 1px solid rgba(227,194,136,.45); pointer-events: none; }
-.soon__pic .ecard__crest, .ecard__crest { width: 64px; height: 64px; aspect-ratio: auto; object-fit: contain; opacity: .95; margin-bottom: .3rem; }
-.ecard__day { font: 500 .8125rem var(--sans); letter-spacing: .3em; text-transform: uppercase; color: #e3c288; }
-.ecard__num { font: 500 clamp(4.2rem, 11vw, 7rem)/1 var(--serif); color: #fbf7ee; margin: .1rem 0; }
-.ecard--rec .ecard__num { font-size: clamp(2.4rem, 6vw, 3.4rem); margin: .3rem 0; }
-.ecard__mon { font: italic 400 1.3rem var(--serif); color: #e3c288; }
-.ecard__t { font: 500 clamp(1.3rem, 2.6vw, 1.7rem)/1.15 var(--serif); margin-top: 1rem; color: #f3ead8; max-width: 18ch; text-wrap: balance; }
-.ecard__m { margin-top: .5rem; font: 500 .875rem var(--sans); letter-spacing: .08em; color: #e2d7c3; }
-.ph--poster .ecard { width: min(100%, 420px); box-shadow: 0 14px 40px rgba(30,21,19,.3); }
-
-/* One warm grade over every photo band so the pictures sit together as a set */
-.ph--img { background-color: #d9a04c; background-blend-mode: soft-light; }
-
 /* Hero: let the building show, and warm it like dusk with the lights on */
 .today .hero__bg { filter: saturate(1) brightness(.95); }
 .today .hero__wash { background:
-  linear-gradient(rgba(227,170,90,.10), rgba(227,170,90,.10)),
   linear-gradient(90deg, rgba(23,19,16,.78) 0%, rgba(23,19,16,.56) 38%, rgba(23,19,16,.9) 68%, #171310 82%),
   linear-gradient(0deg, #171310 0%, rgba(23,19,16,.6) 24%, rgba(23,19,16,0) 52%); }
 @media (max-width: 880px) { .today .hero__wash { background: linear-gradient(0deg, #171310 0%, rgba(23,19,16,.84) 50%, rgba(23,19,16,.5) 100%); } }
@@ -535,3 +517,6 @@ html { scrollbar-color: #8a6a35 #171310; }
 
 h1, h2, h3 { text-wrap: balance; }
 .page h2.sec { font: 500 1.5rem/1.2 var(--serif); margin: 2.4rem 0 1rem; color: var(--ink); }
+
+/* Book a table stays in view while you read a menu in the home page panel (it used to sit at the very bottom of a long scroll). */
+.panel__box > .btn[data-book] { position: sticky; bottom: 0; display: block; margin: 1.4rem 0 0; box-shadow: 0 -14px 24px -4px rgba(237,228,212,.96), 0 -1px 0 rgba(23,19,16,.12); }
