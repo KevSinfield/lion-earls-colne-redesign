@@ -110,7 +110,7 @@
         else if (m.new) top.appendChild(el("span", "badge badge--new", "New"));
         if (m.sample) top.appendChild(sampleTag());
         a.appendChild(top);
-        a.appendChild(el("h3", "mcard__t", m.title));
+        a.appendChild(el("h2", "mcard__t", m.title));
         if (m.blurb) a.appendChild(el("p", "mcard__b", m.blurb));
         a.appendChild(el("p", "mcard__s", m.served_text || ""));
         var go = el("span", "mcard__go", "See the menu");
@@ -139,8 +139,8 @@
     tags.appendChild(el("span", "tag tag--" + m.kind, KIND[m.kind]));
     if (servedNow(m)) tags.appendChild(el("span", "badge badge--now", "Served now"));
     if (m.sample) tags.appendChild(sampleTag());
-    head.appendChild(tags);
     head.appendChild(el("h1", null, m.title));
+    head.appendChild(tags);
     head.appendChild(el("p", "mhead__s", m.served_text || ""));
     box.appendChild(head);
 
@@ -178,7 +178,7 @@
       var shown = 0;
       m.sections.forEach(function (s) {
         var items = s.items;
-        body.appendChild(el("h3", null, s.name));
+        body.appendChild(el("h2", null, s.name));
         if (s.note) body.appendChild(el("p", "menu__note", s.note));
         items.forEach(function (it) {
           shown++;

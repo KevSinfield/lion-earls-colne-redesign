@@ -105,6 +105,28 @@
   }
   function inDays(n) { return n === 0 ? "Today" : n === 1 ? "Tomorrow" : n <= 14 ? "In " + n + " days" : ""; }
 
+  // A designed event card, drawn from the event data in the Lion's own style (replaces the Facebook poster on the home page; the poster stays on the event's own page).
+  function eventCard(e) {
+    var card = el("div", "ecard ecard--" + (e.type === "party" ? "party" : "plain"));
+    card.setAttribute("aria-hidden", "true");
+    var crest = document.createElement("img"); crest.className = "ecard__crest"; crest.src = "images/logo-light.png"; crest.alt = ""; crest.width = 64; crest.height = 64;
+    card.appendChild(crest);
+    if (e.date) {
+      var d = fromIso(e.date);
+      card.appendChild(el("p", "ecard__day", DAYS[d.getDay()]));
+      card.appendChild(el("p", "ecard__num", String(d.getDate())));
+      card.appendChild(el("p", "ecard__mon", ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"][d.getMonth()]));
+    } else {
+      card.classList.add("ecard--rec");
+      card.appendChild(el("p", "ecard__day", "Every week"));
+      card.appendChild(el("p", "ecard__num", e.recurs || ""));
+    }
+    card.appendChild(el("p", "ecard__t", e.short || e.title));
+    var meta = [e.time, e.price].filter(Boolean).join(" \u00b7 ");
+    if (meta) card.appendChild(el("p", "ecard__m", meta));
+    return card;
+  }
+
   function renderSoon(events) {
     var today = isoDay(NOW), todayDate = fromIso(today);
     var real = events.filter(function (e) { return !e.sample; });  // never show the invented sample nights
@@ -135,11 +157,7 @@
       var a = document.createElement("a");
       a.className = "soon__card"; a.href = "event.html?id=" + encodeURIComponent(x.e.id);
       var pic = document.createElement("div"); pic.className = "soon__pic";
-      if (x.e.image) {
-        var im = document.createElement("img"); im.src = x.e.image; im.alt = x.e.image_alt || x.e.title; im.loading = "lazy"; pic.appendChild(im);
-      } else {
-        var ph = document.createElement("div"); ph.className = "soon__noimg"; ph.textContent = x.e.title; pic.appendChild(ph);
-      }
+      pic.appendChild(eventCard(x.e));
       var chip = inDays(x.n);
       if (chip && x.n <= 7) { var c = document.createElement("span"); c.className = "soon__chip"; c.textContent = x.n === 0 && x.e.recurs ? "Tonight" : chip; pic.appendChild(c); }
       var w = document.createElement("span"); w.className = "soon__when"; w.textContent = x.line;
@@ -160,9 +178,7 @@
     ph.style.backgroundImage = "none";
     ph.className = "ph ph--poster";
     ph.removeAttribute("role"); ph.removeAttribute("aria-label");
-    var im = document.createElement("img");
-    im.src = e.image; im.alt = e.image_alt || e.title;
-    ph.insertBefore(im, ph.firstChild);
+    ph.insertBefore(eventCard(e), ph.firstChild);
     var chip = ph.querySelector(".ph__day");
     if (!chip) { chip = document.createElement("div"); chip.className = "ph__day"; ph.appendChild(chip); }
     chip.textContent = "Today: " + (e.short || e.title);
