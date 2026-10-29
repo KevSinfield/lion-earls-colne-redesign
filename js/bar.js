@@ -17,7 +17,8 @@
     ["menus.html", "Menus", "menus"],
     ["whats-on.html", "What's on", "events"],
     ["index.html#history", "History", "history"],
-    ["index.html#find", "Find us", "find"]
+    ["index.html#find", "Find us", "find"],
+    ["contact.html", "Contact", "contact"]
   ];
   var tel = (D.phone || "").replace(/\s/g, "");
 

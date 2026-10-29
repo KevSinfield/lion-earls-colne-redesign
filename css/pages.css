@@ -181,3 +181,39 @@
 
 /* Booking placeholder page: the phone number is set in a loaded weight, not faux bold. */
 .bk__tel { font-weight: 500; font-style: normal; white-space: nowrap; }
+
+/* Get in touch page (29 Oct 2026): a booking card beside the enquiry form. */
+.ct { display: grid; grid-template-columns: 1fr 1.25fr; gap: clamp(1.4rem, 4vw, 3rem); align-items: start; margin-top: 2rem; padding-bottom: 3rem; }
+.ct__book { background: #171310; color: #ede4d4; padding: 2rem; }
+.ct__book h2 { font: 500 1.7rem/1.15 var(--serif); color: #f3ead8; margin-bottom: .6rem; }
+.ct__book p { color: #e2d7c3; margin-bottom: 1.4rem; }
+.ct__book .btn { display: block; }
+.ct__book .ct__tel { margin: 1.2rem 0 0; font-size: .95rem; }
+.ct__tel b { display: block; margin-top: .15rem; font: 500 1.35rem var(--serif); color: #e3c288; }
+.ct__form { background: #fbf7ee; border: 1px solid rgba(30,21,19,.18); padding: 2rem; position: relative; }
+.ct__form h2 { font: 500 1.7rem/1.15 var(--serif); color: #1e1513; margin-bottom: .4rem; }
+.ct__intro { color: #5d5046; margin-bottom: 1.4rem; }
+.f { margin-bottom: 1.1rem; }
+.f label, .f legend { display: block; font: 500 .875rem var(--sans); color: #1e1513; margin-bottom: .35rem; }
+.f input[type=text], .f input[type=number], .f input[type=date], .f textarea { width: 100%; font: 400 1rem var(--sans); padding: .85rem 1rem; min-height: 48px; border: 1px solid rgba(30,21,19,.45); background: #fff; color: #1e1513; border-radius: 0; }
+.f textarea { min-height: 130px; resize: vertical; }
+.f .opt { color: #5d5046; font-weight: 400; }
+.f [aria-invalid=true] { border-color: #a5502e; box-shadow: inset 0 0 0 1px #a5502e; }
+.f__err { margin-top: .35rem; font-size: .875rem; color: #a5502e; }
+.chips { display: flex; flex-wrap: wrap; gap: .5rem; border: 0; padding: 0; }
+.chips legend { width: 100%; }
+.chips label { margin: 0; cursor: pointer; }
+.chips input { position: absolute; opacity: 0; }
+.chips span { display: inline-block; padding: .7rem 1rem; min-height: 44px; border: 1px solid rgba(30,21,19,.45); font: 500 .9375rem var(--sans); color: #1e1513; background: #fff; }
+.chips input:checked + span { background: #1e1513; color: #fbf7ee; border-color: #1e1513; }
+.chips input:focus-visible + span { outline: 2px solid #7a5519; outline-offset: 2px; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.send { width: 100%; background: #171310; color: #f3ead8; border: 0; padding: 1.1rem; font: 500 .875rem var(--sans); letter-spacing: .18em; text-transform: uppercase; cursor: pointer; min-height: 52px; }
+.send:hover { background: #2b2118; }
+.send:disabled { opacity: .7; cursor: wait; }
+.f__status { margin-top: 1rem; padding: .9rem 1rem; font-size: 1rem; border: 1px solid; }
+.f__status.is-ok { background: #e6f0e4; border-color: #2f7a40; color: #1d4a28; }
+.f__status.is-bad { background: #f6e5de; border-color: #a5502e; color: #6e2f17; }
+.fine { margin-top: .9rem; font-size: .875rem; color: #5d5046; }
+.fine a { color: #7a5519; }
+@media (max-width: 880px) { .ct { grid-template-columns: 1fr; } .row2 { grid-template-columns: 1fr; } }

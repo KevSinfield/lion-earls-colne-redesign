@@ -7,6 +7,8 @@ window.LION = {
   phone: "01206 911385",
   email: "TODO",                        // Facebook shows two different mailboxes. Confirm which one the Lion wants shown
   bookingUrl: "booking.html",   // PLACEHOLDER page until the Lion's own Stampede link exists: then put that link here (one place). TODO: the Lion's OWN Stampede link. All "Book a table" links must go through Stampede, never tel:. Empty = buttons point to #find until it exists.
+  // Contact form delivery: a free Web3Forms access key (web3forms.com, sign up with the address that should get the messages). The key is safe to publish; the address stays private. Empty = the form says it is not switched on yet.
+  formKey: "",
   facebook: "https://www.facebook.com/profile.php?id=61594219600168",
 
   // From the Lion's "Updated opening hours" Facebook post of 15 Oct 2026 (supersedes the 2 Oct graphic).
