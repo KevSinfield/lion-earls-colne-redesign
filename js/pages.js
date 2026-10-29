@@ -195,7 +195,7 @@
       });
     }
     draw();
-    box.appendChild(el("p", "menu__foot menu__foot--page", "Please let a member of staff know if you have any dietary requirements."));
+    if (!/dietary/i.test(m.footnote || "")) box.appendChild(el("p", "menu__foot menu__foot--page", "Please let a member of staff know if you have any dietary requirements."));
   }
 
   /* ---------- events ---------- */

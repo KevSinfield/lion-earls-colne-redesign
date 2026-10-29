@@ -178,3 +178,6 @@
 /* Phone tap targets on the inner pages (29 Oct 2026): filters and the back link are at least 44px tall. */
 .chip { min-height: 44px; }
 .backlink { display: inline-block; padding: .95rem 0; }
+
+/* Booking placeholder page: the phone number is set in a loaded weight, not faux bold. */
+.bk__tel { font-weight: 500; font-style: normal; white-space: nowrap; }

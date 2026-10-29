@@ -6,7 +6,7 @@ window.LION = {
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=The+Lion+High+Street+Earls+Colne+CO6+2PA",
   phone: "01206 911385",
   email: "TODO",                        // Facebook shows two different mailboxes. Confirm which one the Lion wants shown
-  bookingUrl: "",   // TODO: the Lion's OWN Stampede link. All "Book a table" links must go through Stampede, never tel:. Empty = buttons point to #find until it exists.
+  bookingUrl: "booking.html",   // PLACEHOLDER page until the Lion's own Stampede link exists: then put that link here (one place). TODO: the Lion's OWN Stampede link. All "Book a table" links must go through Stampede, never tel:. Empty = buttons point to #find until it exists.
   facebook: "https://www.facebook.com/profile.php?id=61594219600168",
 
   // From the Lion's "Updated opening hours" Facebook post of 15 Oct 2026 (supersedes the 2 Oct graphic).

@@ -491,3 +491,6 @@ p, li { text-wrap: pretty; }
 }
 .find > * { min-width: 0; }
 .find__card { max-width: min(380px, calc(100% - 2rem)); }
+
+/* The red "TODO" notes are hidden on the preview (Kev, 29 Oct 2026: "I know what they are"). They are still in the page source and the data files: find them with  grep -rn "todo" . before the site goes live. */
+.todo { display: none !important; }
