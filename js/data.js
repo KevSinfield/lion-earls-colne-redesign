@@ -6,7 +6,7 @@ window.LION = {
   mapsUrl: "https://www.google.com/maps/search/?api=1&query=The+Lion+High+Street+Earls+Colne+CO6+2PA",
   phone: "01206 911385",
   email: "TODO",                        // Facebook shows two different mailboxes. Confirm which one the Lion wants shown
-  bookingUrl: "booking.html",   // PLACEHOLDER page until the Lion's own Stampede link exists: then put that link here (one place). TODO: the Lion's OWN Stampede link. All "Book a table" links must go through Stampede, never tel:. Empty = buttons point to #find until it exists.
+  bookingUrl: "https://booking.stampede.ai/v3/977f7f54-ec77-4e9e-82a9-6c597b43e504/HXK4R7238COI",   // the Lion's own Stampede link (from Kev, 30 Oct 2026). Every Book button follows this one line.
   // Contact form delivery: a free Web3Forms access key (web3forms.com, sign up with the address that should get the messages). The key is safe to publish; the address stays private. Empty = the form says it is not switched on yet.
   formKey: "",
   facebook: "https://www.facebook.com/profile.php?id=61594219600168",
