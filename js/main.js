@@ -221,8 +221,9 @@
   }
   status();
 
-  (function sheet() {
+  function sheet() {
     var T = today(), h = T.h, rail = $("#rail");
+    rail.innerHTML = "";
     $("#sheetDate").textContent = DAYS[NOW.getDay()] + " " + NOW.getDate() + " " + MONTHS[NOW.getMonth()];
     var rows = [];
     if (h) {
@@ -252,8 +253,22 @@
       rail.appendChild(li);
     });
     if (!h) { var li = document.createElement("li"); li.innerHTML = "<span class='rail__t'></span><span class='rail__m' aria-hidden='true'></span><div><span class='rail__h'>Closed today</span><span class='rail__p'></span></div>"; li.children[2].children[1].textContent = "Opens " + nextOpen(T.d) + "."; rail.appendChild(li); }
-    if (h && h.note) { var n = $("#railNote"); n.textContent = h.note + "."; n.hidden = false; }
-  })();
+    var rn = $("#railNote");
+    if (h && h.note) { rn.textContent = h.note + "."; rn.hidden = false; } else rn.hidden = true;
+  }
+  sheet();
+
+  // Keep the page honest if it stays open: re-check every minute and when the tab comes back to the front. A new day reloads the page (photo, week list, events); within a day only the live line and timeline refresh. Not used when ?at= previews another time.
+  if (!new URLSearchParams(location.search).get("at")) {
+    var loadedDay = isoDay(NOW);
+    var refresh = function () {
+      var now = new Date();
+      if (isoDay(now) !== loadedDay) { location.reload(); return; }
+      NOW = now; status(); sheet();
+    };
+    setInterval(refresh, 60000);
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) refresh(); });
+  }
 
   // Menu panel. Menus come from data/menu.json; anything past its valid_to date is hidden.
   function el(tag, cls, text) {
